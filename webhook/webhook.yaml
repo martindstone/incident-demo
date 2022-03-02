@@ -1,0 +1,19 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.openticket.triggered
+      requests:
+        - "curl --header 'Content-Type: application/json' --request POST --data
+          '{\"data\":{\"project\":\"{{.data.project}}\",\"service\":\"{{.data.s\
+          ervice}}\",\"stage\":\"{{.data.stage}}\"},\"shkeptncontext\":\"{{.shk\
+          eptncontext}}\",\"id\":\"{{.id}}\",\"type\":\"{{.type}}\",\"incident\
+          \":{\"ProblemID\":\"{{.data.incident.ProblemID}}\",\"ProblemTitle\":\
+          \"{{.data.incident.ProblemTitle}}\",\"ProblemURL\":\".data.incident.P\
+          roblemURL\",\"State\":\"{{.data.incident.State}}\",\"Tags\":\"{{.data\
+          .incident.Tags}}\"}}'
+          https://webhook.site/20362cd1-1a4c-4676-befa-5fa188811e1d"
+      subscriptionID: 65f9a4a6-854c-4d9c-859b-8d5a39addfea
+      sendFinished: true
