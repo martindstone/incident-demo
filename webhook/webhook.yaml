@@ -16,4 +16,4 @@ spec:
           .incident.Tags}}\"}}'
           https://events.pagerduty.com/x-ere/R019W5T6T8X269OF0MJF8C4JJ0AZYKB8"
       subscriptionID: 65f9a4a6-854c-4d9c-859b-8d5a39addfea
-      sendFinished: true
+      sendFinished: false
