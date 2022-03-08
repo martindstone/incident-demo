@@ -10,5 +10,5 @@ spec:
       tasks:
       - name: openticket
       - name: evaluation
-         properties:
-           timeframe: "5m" 
+        properties:
+          timeframe: "5m"
