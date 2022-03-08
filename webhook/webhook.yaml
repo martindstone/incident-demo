@@ -6,19 +6,6 @@ spec:
   webhooks:
     - type: sh.keptn.event.openticket.triggered
       requests:
-        - "curl --header 'Content-Type: application/json' --request POST --data
-          '{\"data\":{\"project\":\"{{.data.project}}\",\"service\":\"{{.data.s\
-          ervice}}\",\"stage\":\"{{.data.stage}}\"},\"shkeptncontext\":\"{{.shk\
-          eptncontext}}\",\"id\":\"{{.id}}\",\"type\":\"{{.type}}\",\"incident\
-          \":{\"ProblemID\":\"{{.data.incident.ProblemID}}\",\"ProblemTitle\":\
-          \"{{.data.incident.ProblemTitle}}\",\"ProblemURL\":\".data.incident.P\
-          roblemURL\",\"State\":\"{{.data.incident.State}}\",\"Tags\":\"{{.data\
-          .incident.Tags}}\"}}'
-          https://events.pagerduty.com/x-ere/R019W5T6T8X269OF0MJF8C4JJ0AZYKB8"
-      subscriptionID: 65f9a4a6-854c-4d9c-859b-8d5a39addfea
-      sendFinished: true
-    - type: sh.keptn.event.openticket.triggered
-      requests:
         - curl --request POST
           https://webhook.site/1898ffea-8d6b-4ad5-b95c-e754c2a9937b
       subscriptionID: c3b50461-5729-4b94-9a25-ba999f9b721b
