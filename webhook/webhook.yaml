@@ -6,12 +6,6 @@ spec:
   webhooks:
     - type: sh.keptn.event.openticket.triggered
       requests:
-        - curl --request POST
-          https://webhook.site/1898ffea-8d6b-4ad5-b95c-e754c2a9937b
-      subscriptionID: c3b50461-5729-4b94-9a25-ba999f9b721b
-      sendFinished: true
-    - type: sh.keptn.event.openticket.triggered
-      requests:
         - "curl --header 'Content-Type: application/json' --request POST --data
           '{\"data\":{\"project\":\"{{.data.project}}\",\"service\":\"{{.data.s\
           ervice}}\",\"stage\":\"{{.data.stage}}\"},\"shkeptncontext\":\"{{.shk\
